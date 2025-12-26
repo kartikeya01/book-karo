@@ -1,0 +1,83 @@
+# ================================
+# OS (macOS)
+# ================================
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ================================
+# IDEs
+# ================================
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+
+# VS Code
+.vscode/
+
+# Eclipse / STS
+.project
+.classpath
+.settings/
+
+# ================================
+# Java / Spring Boot
+# ================================
+# Compiled class files
+*.class
+
+# Maven
+target/
+*.log
+dependency-reduced-pom.xml
+
+# Gradle (if used later)
+.gradle/
+build/
+
+# Spring Boot
+application-*.yml
+application-*.properties
+
+# ================================
+# Frontend (React / Next.js)
+# ================================
+frontend/node_modules/
+frontend/.next/
+frontend/dist/
+frontend/build/
+frontend/.cache/
+frontend/.env
+frontend/.env.local
+frontend/.env.production
+
+# ================================
+# Backend (Spring)
+# ================================
+backend/**/target/
+backend/**/logs/
+backend/**/.env
+
+# ================================
+# Logs
+# ================================
+logs/
+*.log
+
+# ================================
+# Docker
+# ================================
+docker-compose.override.yml
+
+# ================================
+# Temporary / Runtime
+# ================================
+*.tmp
+*.temp
+*.swp
+
+# ================================
+# OS / Misc
+# ================================
+Thumbs.db
