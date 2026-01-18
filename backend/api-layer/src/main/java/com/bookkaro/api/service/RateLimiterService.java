@@ -24,7 +24,7 @@ public class RateLimiterService {
     /**
      * Checks with Redis if a request is allowed for a given key.
      */
-    public Mono<Boolean> isAllowed(String key, int replenishRate, int burstCapacity) {
+    public Mono< Boolean> isAllowed(String key, int replenishRate, int burstCapacity, String serviceNode) {
         // Unique keys for the token count and the last refill timestamp
         List<String> keys = Arrays.asList(key + ":tokens", key + ":timestamp");
 
@@ -37,7 +37,7 @@ public class RateLimiterService {
         );
 
         System.out.println("[SERVICE] Checking Redis for Key: " + key +
-                " | Limits: " + replenishRate + " TPS / " + burstCapacity + " Burst");
+                " | Limits: " + replenishRate + " TPS / " + burstCapacity + " Burst for service " + serviceNode);
 
         return redisTemplate.execute(script, keys, args)
                 .next()
